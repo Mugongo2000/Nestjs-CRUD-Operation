@@ -16,4 +16,9 @@ export class UserController {
  async findOne(@Param('id') id: number): Promise<User> {
     return await this.userService.findOne(id);
   }
+
+  @Get()
+  async findAll(): Promise<User[]> {
+    return await this.userService.findAll();
+  }
   }
